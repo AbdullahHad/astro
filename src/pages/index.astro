@@ -1,58 +1,37 @@
-<!-- src/pages/index.astro -->
-<html lang="en">
-
+---
+// No need for frontmatter if nothing is imported
+---
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <title>Welcome</title>
-    <style>
-      body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        font-family: sans-serif;
-        background-color: #f0f0f0;
-        margin: 0;
-      }
+  </head>
+  <body class="bg-gray-100 flex items-center justify-center min-h-screen m-0 font-sans">
+    <div class="bg-white p-10 rounded-2xl shadow-lg flex flex-col items-center gap-6 text-center">
+      <h1 class="text-2xl font-semibold text-gray-800">Choose your language</h1>
+      <button
+        class="px-6 py-3 text-white bg-blue-600 hover:bg-blue-700 rounded-lg text-lg w-48"
+        onclick="setLang('en')"
+      >
+        English
+      </button>
+      <button
+        class="px-6 py-3 text-white bg-orange-500 hover:bg-orange-600 rounded-lg text-lg w-48"
+        onclick="setLang('ar')"
+      >
+        العربية
+      </button>
+    </div>
 
-      .language-box {
-        background-color: white;
-        padding: 2rem 3rem;
-        border-radius: 1rem;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
-        text-align: center;
-      }
+    <script>
+      const preferredLang = localStorage.getItem('lang');
+      if (preferredLang === 'en') window.location.href = '/en';
+      if (preferredLang === 'ar') window.location.href = '/ar';
 
-      h1 {
-        margin: 0;
-        font-size: 1.8rem;
-        color: #333;
+      function setLang(lang) {
+        localStorage.setItem('lang', lang);
+        window.location.href = '/' + lang;
       }
-
-      button {
-        padding: 0.75rem 2rem;
-        font-size: 1.2rem;
-        border: none;
-        border-radius: 0.5rem;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-      }
-
-      button.english {
-        background-color: #0070f3;
-        color: white;
-      }
-
-      button.arabic {
-        background-color: #f97316;
-        color: white;
-      }
-
-      button:hover {
-        opacity: 0.9;
-      }
-    </styl
+    </script>
+  </body>
+</html>
