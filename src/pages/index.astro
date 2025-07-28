@@ -1,22 +1,36 @@
-<!-- src/pages/welcome.astro -->
+<!-- src/pages/index.astro -->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Welcome</title>
+    <title>Welcome | Abdullah AlHadbani</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
-  <body class="bg-gray-100 flex items-center justify-center min-h-screen m-0 font-sans">
-    <div class="bg-white p-10 rounded-2xl shadow-lg text-center">
-      <h1 class="text-2xl font-bold mb-6 text-gray-800">Welcome Please select a language to view my portfolio</h1>
-      <button
-        onclick="window.location.href='/about'"
-        class="px-6 py-3 text-white bg-blue-600 hover:bg-blue-700 rounded-lg text-lg"
-      >
-العربية      </button>
-      <button
-        onclick="window.location.href='/en'"
-        class="px-6 py-3 text-white bg-blue-600 hover:bg-blue-700 rounded-lg text-lg"
-      >English
-      </button>
+  <body class="bg-gradient-to-b from-blue-100 to-white flex items-center justify-center min-h-screen font-sans">
+    <div class="bg-white p-10 sm:p-12 rounded-2xl shadow-2xl text-center max-w-lg w-full border border-gray-200">
+      <img src="/images/abdullah.png" alt="Abdullah AlHadbani" class="w-24 h-24 mx-auto rounded-full shadow mb-6" />
+
+      <h1 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-4">
+        Welcome to My Portfolio
+      </h1>
+      <p class="text-gray-600 mb-6">
+        Please select your preferred language
+      </p>
+
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <button
+          onclick="window.location.href='/about'"
+          class="px-6 py-3 text-white bg-blue-600 hover:bg-blue-700 rounded-lg text-lg transition"
+        >
+          العربية
+        </button>
+
+        <button
+          onclick="window.location.href='/en'"
+          class="px-6 py-3 text-white bg-gray-700 hover:bg-gray-800 rounded-lg text-lg transition"
+        >
+          English
+        </button>
+      </div>
     </div>
   </body>
 </html>
