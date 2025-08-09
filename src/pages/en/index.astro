@@ -38,13 +38,16 @@ title: "About Me";
 
 <main class="min-h-screen  bg-gold px-0">
   <!-- FULL‑BLEED HEADER (shows entire image, no crop) -->
-  <header class="w-full">
-    <img
-      src="/images/Header.jpg"
-      alt="Vision 2030 Header"
-      class="block w-full h-auto"  
-    />
-  </header>
+  <header class="w-full overflow-hidden
+  h-[clamp(140px,28vh,380px)] sm:h-[clamp(160px,32vh,420px)]
+  md:h-[clamp(200px,36vh,480px)] lg:h-[clamp(240px,40vh,540px)]
+  xl:h-[clamp(280px,44vh,600px)]">
+  <img
+    src="/images/Header.jpg"
+    alt="Vision 2030 Header"
+    class="w-full h-full object-cover object-[50%_30%]"
+  />
+</header>
 
 
   <!-- Main Card -->
