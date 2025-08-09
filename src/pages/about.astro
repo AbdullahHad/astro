@@ -1,98 +1,84 @@
 ---
 import '../styles/global.css';
-title: "About Me";
+title: "نبذة عني";
 ---
-<html lang="ar" dir="rtl">
-  
-<head>
-  <meta charset="UTF-8" />
-  <title>Abdullah AlHadbani | Software Engineer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="Explore the portfolio of Abdullah AlHadbani, a software engineer skilled in Flutter, React, and AstroJS, working on digital health and frontend solutions in Saudi Arabia." />
-  <meta name="keywords" content="Abdullah AlHadbani, Software Engineer, Flutter, AstroJS, React, Saudi Arabia, HealthTech, Portfolio, Vision 2030" />
-  <meta name="author" content="Abdullah AlHadbani" />
 
-  <!-- Open Graph (for social media previews) -->
-  <meta property="og:title" content="Abdullah AlHadbani | Software Engineer Portfolio" />
-  <meta property="og:description" content="Full-stack developer passionate about building web and mobile apps aligned with Saudi Vision 2030." />
-  <meta property="og:image" content="https://abdullahalhadbani.me/images/Abdullah2.jpg" />
-    <meta property="og:image:width" content="1000" />
-    <meta property="og:image:height" content="1000" />
-  <meta property="og:url" content="https://abdullahalhadbani.me/" />
-  <meta property="og:type" content="website" />
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Abdullah AlHadbani | Software Engineer" />
-  <meta name="twitter:description" content="Explore my portfolio, projects, and experience in frontend and health-tech development." />
-  <meta name="twitter:image" content="https://abdullahalhadbani.me/images/Abdullah2.jpg" />
-</head>
-
-  </head>
-</html>
-
-<main class="min-h-screen  bg-gold px-4">
-  <!-- Header -->
-  <div class="w-full h-64 sm:h-80 md:h-96 overflow-hidden">
-    <img src="/images/Header.jpg" alt="Vision 2030 Header" class="w-full h-full object-cover" />
-  </div>
+<main class="min-h-screen bg-gold px-0">
+  <!-- Responsive Header -->
+  <header class="w-full overflow-hidden
+    h-[clamp(120px,22vh,300px)] sm:h-[clamp(140px,24vh,320px)]
+    md:h-[clamp(160px,26vh,340px)] lg:h-[clamp(180px,28vh,360px)]
+    xl:h-[clamp(200px,30vh,380px)]">
+    <img
+      src="/images/Header.jpg"
+      alt="رأس الصفحة رؤية 2030"
+      class="w-full h-full sm:object-cover sm:object-center object-contain bg-gold"
+    />
+  </header>
 
   <!-- Main Card -->
-<div class="max-w-2xl w-full mx-auto bg-white rounded-2xl shadow-xl -mt-12 p-6 sm:p-8 text-center space-y-6 border border-gray-200">
-  
-  <!-- Back Button (moved inside) -->
-  <div class="text-left">
-    <button
-      onclick="window.location.href='/'"
-      class="px-6 py-2 mb-2 text-white bg-gray-700 hover:bg-gray-800 rounded-lg text-sm sm:text-base"
-    >
-      ← الرجوع الى الصفحة الرئيسية
-    </button>
-  </div>
+  <section class="max-w-2xl mx-auto px-4">
+    <div class="bg-white rounded-2xl shadow-xl -mt-12 p-6 sm:p-8 text-center space-y-4 border border-gray-200" dir="rtl">
+      
+      <!-- Back Button -->
+      <div class="text-right">
+        <button onclick="window.location.href='/'" class="px-6 py-2 mb-2 text-white bg-gray-700 hover:bg-gray-800 rounded-lg text-sm sm:text-base">
+          ← الرجوع إلى الصفحة الرئيسية
+        </button>
+      </div>
 
-  <!-- Profile Image -->
-  <img
-    src="/images/abdullah.png"
-    alt="Abdullah Almutairi"
-    class="w-28 h-28 rounded-full mx-auto shadow-md border-4 border-white"
-  />
+      <!-- Profile Image -->
+      <img src="/images/abdullah.png" alt="عبدالله المطيري" class="w-28 h-28 rounded-full mx-auto shadow-md border-4 border-white" />
+
+      <!-- Name & Title -->
+      <h1 class="text-2xl sm:text-3xl font-bold text-gray-800">م. عبدالله الحذيباني</h1>
+      <p class="text-sm sm:text-base text-center">مطور برمجيات متكامل | Angular • Astro • .NET</p>
+      <p class="text-sm sm:text-base text-center">الرياض - المملكة العربية السعودية</p>
+
+      <!-- Summary -->
+      <p class="text-sm sm:text-base text-right">
+        مطور برمجيات متكامل بخبرة في إنشاء تطبيقات متجاوبة وقابلة للتوسع باستخدام Angular وAstro و.NET وJavaScript وJava وHTML وCSS وSQL.
+        لدي خبرة في تطوير الواجهات الأمامية والخلفية وتصميم قواعد البيانات ودمج واجهات البرمجة (APIs)، بالإضافة إلى الإلمام بممارسات Agile/Scrum والعمل الجماعي لتقديم حلول عملية موجهة للمستخدم.
+      </p>
+
+      <!-- Education -->
+      <p class="text-sm sm:text-base font-semibold text-right">التعليم:</p>
+      <p class="text-sm sm:text-base mb-2 text-right">
+        بكالوريوس هندسة برمجيات - جامعة الملك سعود (2020–2025) | المعدل التراكمي: 4.53/5 مع مرتبة الشرف
+      </p>
+
+      <!-- Projects -->
+      <p class="text-sm sm:text-base font-semibold mt-2 text-right">المشاريع البارزة:</p>
+      <ul class="text-sm sm:text-base list-disc list-inside text-right">
+        <li><strong>الموقع الشخصي</strong> – بُني باستخدام Astro وTailwind CSS، ويدعم تعدد اللغات وتحسين محركات البحث، مع ربط GitHub–Netlify للنشر التلقائي.</li>
+        <li><strong>PulseGuard</strong> – تطبيق ويب لمراقبة المؤشرات الصحية مثل معدل نبضات القلب والتنبيهات الطارئة ولوحات التحكم المخصصة؛ تم دمج Firebase وإدارة المشروع بأسلوب Scrum.</li>
+        <li><strong>Eqraa</strong> – تطبيق لاكتشاف وقراءة الكتب باستخدام Google Books API، مع إمكانيات بحث متقدمة وتسجيل دخول ومكتبة مخصصة للمستخدم.</li>
+      </ul>
+
+      <!-- Contact Icons -->
+      <div class="flex justify-center gap-6 mt-4 text-gray-600 text-xl">
+        <a href="mailto:Abdullah.mutairi@outlook.sa"><img src="/icons/mail.png" alt="البريد الإلكتروني" class="w-6 h-6 hover:opacity-80" /></a>
+        <a href="tel:+966552789570"><img src="/icons/phone-call.png" alt="الهاتف" class="w-6 h-6 hover:opacity-80" /></a>
+        <a href="https://www.linkedin.com/in/abdullah-almutairi-841b34264" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.44 8.52h4.11v12.48H.44V8.52zM8.34 8.52h3.92v1.7h.06c.55-1.04 1.9-2.14 3.92-2.14 4.2 0 4.97 2.76 4.97 6.34v7.06h-4.12v-6.25c0-1.49-.03-3.4-2.08-3.4-2.08 0-2.4 1.62-2.4 3.3v6.35H8.34V8.52z"/>
+          </svg>
+        </a>
+      </div>
+
+     <!-- CV Preview -->
+<hr class="my-4 border-gray-300" />
+<div class="mt-6">
+  <iframe src="/files/Abdullah-CV.pdf" class="w-full h-[500px] border rounded-lg"></iframe>
+  <a href="/files/Abdullah-CV.pdf" download class="mt-4 inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg shadow transition">
+    تحميل السيرة الذاتية
+  </a>
+</div>
 
 
-    <h1 class="text-2xl sm:text-3xl font-bold text-gray-800">Eng.Abdullah AlHadbani</h1>
-    <p class="text-sm sm:text-base text-center">#Flutter #React #AstroJS #Frontend #Agile #HealthTech #Saudi2030</p>
-    <p class="text-sm sm:text-base text-center">Software Engineer</p>
-    <p class="text-sm sm:text-base text-center" dir="rtl">الرياض - المملكة العربية السعودية</p>
-
-    <p class="text-sm sm:text-base text-right" dir="rtl">
-      مهندس برمجيات بخلفية أكاديمية قوية من جامعة الملك سعود، ومهارات عملية في تطوير تطبيقات الموبايل والويب باستخدام Flutter وJava وHTML وCSS وJavaScript، بالإضافة إلى React وAstro JS لبناء واجهات استخدام تفاعلية وسريعة الأداء.
-      عملت على تطوير مشاريع مثل PulseGuard لمراقبة المؤشرات الصحية وEqraa لتعزيز تجربة القراءة الرقمية، مطبقًا خلالها منهجية Scrum وأدوات إدارة الفرق مثل Trello وMonday.com.
-      أمتلك اهتمامًا خاصًا بدمج الحلول التقنية في مجالات الصحة والتعليم، وأسعى لبناء برمجيات مرنة وتجارب استخدام فعالة تدعم التحول الرقمي ضمن مستهدفات رؤية السعودية 2030.
-    </p>
-
-    <!-- Contact Icons -->
-    <div class="flex justify-center gap-6 mt-4 text-gray-600 text-xl">
-      <a href="mailto:Abdullah.almutairi@outlook.sa"><img src="/icons/mail.png" alt="Email" class="w-6 h-6 hover:opacity-80" /></a>
-      <a href="tel:+966552789570"><img src="/icons/phone-call.png" alt="Phone" class="w-6 h-6 hover:opacity-80" /></a>
-      <a href="https://www.linkedin.com/in/abdullah-almutairi-841b34264" target="_blank">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.44 8.52h4.11v12.48H.44V8.52zM8.34 8.52h3.92v1.7h.06c.55-1.04 1.9-2.14 3.92-2.14 4.2 0 4.97 2.76 4.97 6.34v7.06h-4.12v-6.25c0-1.49-.03-3.4-2.08-3.4-2.08 0-2.4 1.62-2.4 3.3v6.35H8.34V8.52z"/>
-        </svg>
-      </a>
+      <p class="text-gray-600 text-sm px-4 text-right">
+        لا تتردد في التواصل لطرح الأسئلة أو فرص العمل أو التعاون.
+      </p>
     </div>
-
-    <!-- CV Preview -->
-    <hr class="my-4 border-gray-300" />
-    <div class="mt-6">
-      <iframe src="/files/Abdullah-CV.pdf" class="w-full h-[500px] border rounded-lg"></iframe>
-      <a href="/files/Abdullah-CV.pdf" download class="mt-4 inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg shadow transition">
-        Download CV
-      </a>
-    </div>
-
-    <p class="text-gray-600 text-sm px-4">
-      Feel free to reach out if you have questions, internship opportunities, or ideas to collaborate on.
-    </p>
-  </div>
+  </section>
 </main>
